@@ -1,6 +1,28 @@
-Prompt: How LLMs work tokens, context windows, temperature, why hallucination happens, what LLMs actually are
+Section 1: How LLMs work -- tokens, context windows, temperature, why hallucination happens, what LLMs actually are
 LLMs' outputs are influenced by the prompt and training. The training half is a process by which the LLM is given massive amounts of training data, and from there it understands the tokens in their context. A token is a small string of letters that the LLM associates with its vector. A token's vector is molded through the AI training as the LLM understands the "space" that a token occupys in our mental image of the language. 
 An LLM cannot focus on too many things at once though or it begins to forget what it has been told/asked to do. This limit, called the context window, is measured in the number of tokens the LLM has seen in the conversation. 
 Another important part to mention about LLMs' training is that, vectorizing the tokens and understanding what they mean in context, the LLMs' purpose is to predict the next best token to use based off of its training. Then, when you prompt an LLM, you are sometimes able to adjust the temperature of the response. The temperature is how true to the "best possible next token" you want the LLM to be. An LLM can adjust this by adjusting the percent weighting given to the most likely/least likely next tokens So, if you want a process/response to be very accurate, you should use a low temperature. However, if you want more creativity in the response, a higher temperature would achieve that.
 Hallucinations happen because AI is trained to give you the next best token based on its training data and the weights that that has produced. It is not trained to give you the next best token based off of what is actually true. This means that an LLM's next best string of tokens might be the most likely based on the training data that it has recieved, but, either due to that data being old, inaccurate, etc, that might not be a facutal string of tokens which is what we care about. 
 LLMs are actually neural networks that use training data to find certain weights for different token outcomes when prompted differently. This means that it takes the training that it has recieved, understands teh prompt in that context, and outputs a response that best fits the training it has.
+Section 2: Prompt Engineering Cheat Sheet -- techniques you'd actually use
+One useful technique is to give the AI more time to think about its response which can help it give more strucutred plans. Simply adding "Think through this step by step before answering" can be bery helpful. 
+Another useful technique is to constrain the output. You do this by telling it exactly what you want back. For example "give me the function and give me a 4 line description of the function that you make." This eliminates unecessary rambling.
+Another useful techinque is to tell the AI what not to do. The AI follows these negative restrictions more rigorously than positive ones so it works well in that sense. For example: "In this essay, do not cover issues from chapters 5-8"
+A final strategy for prompting would be be to iterate, not to restart. This means that even if the AI gives you a bad output you should try to work off of that instead of starting over. For example, say "I want you to rewrite that third paragraph so that if connects more to the themes of suffering expressed in the fourth. Also have the conclusion reference hatred more" instead of having it rewrite the entire essay. 
+Section 3: RAG in Plain English -- what RAG is, why it exists, the basic flow (retrieve → inject → generate), and how it connects to the arbitrage bot idea
+RAG is retrieval augmented generation which is a technique by which the user of an AI goes out, finds the data/document that it wants the AI to reference during a specific prompt and injects it directly into the prompt. This lets the AI see directly what data you want it to get its ideas from and in that process helps eliminate hallucinations and be most accurate to the task you have given it.
+It connects to the arbitrage bot because the bot is going to have to generate its results from specific sports betting data that is current.
+Section 4: Terminal Quick Reference -- cover the 8-10 commands you will use most and explain each in a line.
+ls -a --> lists all files and folders in the current folder, even hidden ones
+cd FOLDERNAME --> allows you to navigate to a speficic folder
+cd ~ --> allows you to navigate to the user folder
+mv --> allows you to move files and folders around
+mkdir --> makes a new folder
+touch --> makes a new file
+cat --> prints the file contents on the screen
+rm --> deletes the file
+Section 5: Git Workflow -- Cover: the 3-step push workflow (add → commit → push), what each step does, and when you'd use git status or git log
+The three-step push workflow allows you to save your changes on to the cloud. Add stages the contents that you want to save, meaning that it is where you decided what to save. Commit actually saves the materials and gives the save a name. Push syncs those materials to your GitHub repository.
+You would use Git status to understand and see the tracking status of the files and git log for the history of saves.
+Section 6: What I Want to Build
+I want to build a multitude of different things from apps, to agents, to trading bots. Phase 1 has been instrumental in helping me understand the basics of AI, what it does and how it can be most helpful. This will allow me to properly leverage the full power of AI when it comes to using it for my project. Additionally, Phase 1 has introduced me to tools like the terminal, like GitHub, like VS Code, that will allow be to efficiently control my projects and manage their creation.  
