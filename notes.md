@@ -1,0 +1,2 @@
+This is my notes app. This first line that I am putting together is so that I can make my first commit and push it.
+Alright now this one is the second description. Claude is saying i need to practice. UGH! Fine dude! Just kidding, probably a good idea.
